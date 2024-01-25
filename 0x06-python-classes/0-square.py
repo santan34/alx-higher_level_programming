@@ -2,6 +2,8 @@
 """
 program to create a class
 """
+
+
 class Square:
     """
     creates an empty class square
