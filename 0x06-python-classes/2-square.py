@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+a program to create a square class
+"""
+
+
 class Square:
     """
     class to hold squares
