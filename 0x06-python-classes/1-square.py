@@ -1,12 +1,23 @@
 #!/usr/bin/python3
+"""
+a program to create a square class
+"""
+
+
 class Square:
     """
-    creates a square class object
+    class to hold squares
     """
-    def __init__(self, size):
-        self.__size = size
+    def __init__(self, size=0):
+        if type(size) is not int:
+            raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = size
         """
-        initialises a square object
+        initilisation of the class
         Args:
             size(int): size of the square
+            size must be posistive and integer type
         """
