@@ -27,9 +27,8 @@ class Square:
     """
     Gets the value of a private instance
     Returns:
-        the size of the square 
-    """
-
+        the size of the square
+        """
     @property
     def size(self, value):
         if type(value) is not int:
