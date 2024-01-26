@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+A sqaure class
+"""
+
+
 class Square:
     """
        a class for square object
@@ -23,9 +28,8 @@ class Square:
     """
     Gets the value of a private instance
     Returns:
-        the size of the square 
+        the size of the square
     """
-
     @size.setter
     def size(self, value):
         if type(value) is not int:
