@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 class Square:
     """
        a class for square object
@@ -26,7 +26,7 @@ class Square:
         the size of the square 
     """
 
-    @property
+    @size.setter
     def size(self, value):
         if type(value) is not int:
             raise TypeError("size must be an integer")
