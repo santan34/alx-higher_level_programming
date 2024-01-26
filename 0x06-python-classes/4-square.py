@@ -1,9 +1,13 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
+"""
+working with the square class
+"""
+
+
 class Square:
     """
        a class for square object
        """
-
     def __init__(self, size=0):
         if type(size) is not int:
             raise TypeError("size must be an integer")
@@ -23,9 +27,8 @@ class Square:
     """
     Gets the value of a private instance
     Returns:
-        the size of the square 
-    """
-
+        the size of the square
+        """
     @property
     def size(self, value):
         if type(value) is not int:
