@@ -9,10 +9,6 @@ class Square:
        a class for square object
        """
     def __init__(self, size=0):
-        if type(size) is not int:
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
         self.__size = size
         """
         Initialises the size instance of square
@@ -29,7 +25,7 @@ class Square:
     Returns:
         the size of the square
         """
-    @property
+    @size.setter
     def size(self, value):
         if type(value) is not int:
             raise TypeError("size must be an integer")
