@@ -1,0 +1,60 @@
+
+===========
+Normal case
+===========
+2 ints
+::
+    >>> add_integer = __import__("0-add_integer").add_integer
+    >>> add_integer(2, 3)
+    5
+
+2 floats
+::
+    >>> add_integer(2.5, 3,9)
+    5
+
+1 float and one int
+::
+    >>> add_integer(2.6, 3)
+    5
+
+    >>> add_integer(2, 3.9)
+    5
+
+Negative numbers
+::
+    >>> add_integer(-2, 3)
+    1
+
+    >>> add_integer(-2, -3)
+    -5
+
+    >>> add_integer(2, -3,7)
+    1
+
+one input
+::
+    >>> add_integer(2)
+    100
+
+None number data types
+::
+    >>> add_integer("a", 4)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(3, {1, 4})
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer([])
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(float('inf'))
+    Traceback (most recent call last):
+    OverflowError: cannot convert float infinity to integer
+
+    >>> add_integer(float('NaN'))
+    Traceback (most recent call last):
+    ValueError: cannot convert float NaN to integer
