@@ -10,7 +10,7 @@
 	>>> text_indentation("hello. how are you I'm doing fine")
 	hello.
 	<BLANKLINE>
-	 how are you I'm doing fine
+	how are you I'm doing fine
 
 	>>> text_indentation("hello")
 	hello
