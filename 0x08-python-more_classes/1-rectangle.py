@@ -1,0 +1,61 @@
+#!/usr/bin/python3
+"""
+Rectangle class
+"""
+
+
+class Rectangle:
+    """
+    A class called Rectangle
+    """
+    def __init__(self, width=0, height=0):
+        """
+        Instancete tha class
+        both parameters should be integers
+        :param width(optional): the width of the rectangle
+        :param height(optional): the length of the rectangle
+        """
+        self.__width = width
+        self.__height = height
+
+    @property
+    def width(self):
+        """
+        Getter for the class
+        :return: the private width
+        """
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        """
+        the setter for witdh
+        :param value(int): the integer to set as width
+        :return: Nothing
+        """
+        if not isinstance(value, int):
+            raise TypeError("width must be an integer")
+        if value < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = value
+
+    @property
+    def height(self):
+        """
+        Sets the height of the rectangle
+        :return: the height of the rectangle
+        """
+        return self.__height
+
+    @height.setter
+    def height(self, value):
+        """
+        The setter for the height variable
+        :param value(int): the value to use as the height
+        :return: Nothing
+        """
+        if not isinstance(value, int):
+            raise TypeError("height must be an integer")
+        if value < 0:
+            raise ValueError("height must be >= 0")
+        self.__height = value
