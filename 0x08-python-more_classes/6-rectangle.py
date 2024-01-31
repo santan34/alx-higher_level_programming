@@ -107,4 +107,5 @@ class Rectangle:
     def __del__(self):
         """ modifies del object
         """
+        Rectangle.number_of_instances -= 1
         print("{}".format("Bye rectangle..."))
