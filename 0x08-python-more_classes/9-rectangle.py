@@ -104,7 +104,10 @@ class Rectangle:
         """
         if (self.__height == 0) or (self.__width == 0):
             return ""
-        return '\n'.join(Rectangle.print_symbol * self.__width for x in range(self.__height))
+        return '\n'.join(
+            Rectangle.print_symbol *
+            self.__width for x in range(
+                self.__height))
 
     def __repr__(self):
         """modifies repr object
