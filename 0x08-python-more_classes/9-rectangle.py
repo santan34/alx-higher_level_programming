@@ -30,6 +30,13 @@ class Rectangle:
         self.__height = height
         Rectangle.number_of_instances += 1
 
+    @classmethod
+    def square(cls, size=0):
+        """
+        makes me a square
+        """
+        return cls(size, size)
+
     @property
     def width(self):
         """
@@ -110,3 +117,18 @@ class Rectangle:
         """
         Rectangle.number_of_instances -= 1
         print("{}".format("Bye rectangle..."))
+
+    def bigger_or_equal(rect_1, rect_2):
+        """
+        finds the bigger of two rectangles
+        :param rect_1: the firts rectangle
+        :param rect_2: the second rectangle
+        """
+        if not isinstance(rect_1, Rectangle):
+            TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() < rect_2.area():
+            return rect_2
+        else:
+            return rect_1
