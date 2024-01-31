@@ -5,6 +5,11 @@ Prints text with two lines after each ., ? and :
 
 
 def text_indentation(text):
+    """
+    prints out the given string adding two lines when we get to "." or "?" and ":"
+    Args:
+        text(str): the string to be printed out
+    """
     if type(text) is not str:
         raise TypeError("text must be a string")
     for i in text:
@@ -14,8 +19,3 @@ def text_indentation(text):
             print()
         else:
             print(f"{i}", end="")
-    """
-    prints out the given string adding two lines when we get to "." or "?" and ":"
-    Args:
-        text(str): the string to be printed out
-    """

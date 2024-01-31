@@ -30,9 +30,9 @@ class testMax(unittest.TestCase):
 
     def test7(self):
         self.assertEqual(max_integer([-2, -4, -6]), -2)
-    
+
     def test8(self):
-        self.assertEqual((max_integer[2]), 2)
+        self.assertEqual(max_integer([2]), 2)
 
 
 if __name__ == "__main__":
