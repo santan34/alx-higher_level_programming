@@ -11,4 +11,4 @@ def load_from_json_file(filename):
     :param filename: the file to load from
     """
     with open(filename, mode="r", encoding="UTF8") as f:
-        return json.loads(f)
+        return json.(f)
