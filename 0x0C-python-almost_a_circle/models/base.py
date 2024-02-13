@@ -8,8 +8,9 @@ class Base:
     """
     the base class for whatever we are going to be doing
     """
-    
+
     _nb_objects = 0
+
     def __init__(self, id=None):
         """
         Instanciate the class
@@ -25,7 +26,9 @@ class Base:
         """dictionary"""
         dic = {'id': self.id, 'size': self.size,
                'x': self.x, 'y': self.y}
-        return dic#!/usr/bin/python3
+        return dic  # !/usr/bin/python3
+
+
 """
 The base class
 """
@@ -35,8 +38,9 @@ class Base:
     """
     the base class for whatever we are going to be doing
     """
-    
+
     __nb_objects = 0
+
     def __init__(self, id=None):
         """
         Instanciate the class
