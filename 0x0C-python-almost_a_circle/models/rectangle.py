@@ -9,6 +9,7 @@ class Rectangle(Base):
     """
     A class to store rectangles
     """
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Instanceate the class"""
         super().__init__(id)
