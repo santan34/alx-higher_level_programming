@@ -36,7 +36,7 @@ class Base:
     the base class for whatever we are going to be doing
     """
     
-    _nb_objects = 0
+    __nb_objects = 0
     def __init__(self, id=None):
         """
         Instanciate the class
