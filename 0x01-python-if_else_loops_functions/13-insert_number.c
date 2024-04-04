@@ -20,6 +20,7 @@ listint_t *insert_node(listint_t **head, int number)
 	}
 	while (number < temp->next->n)
 	{
+		printf("1\n");
 		temp = temp->next;
 	}
 	node->next = temp->next;
