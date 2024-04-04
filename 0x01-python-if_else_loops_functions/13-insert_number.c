@@ -18,9 +18,8 @@ listint_t *insert_node(listint_t **head, int number)
 		node->next = temp;
 		*head = node;
 	}
-	while (number < temp->next->n)
+	while (number > temp->next->n)
 	{
-		printf("1\n");
 		temp = temp->next;
 	}
 	node->next = temp->next;
