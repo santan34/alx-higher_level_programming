@@ -1,8 +1,11 @@
 #!/usr/bin/node
 
-const sum = Number(process.argv[2] + process.argv[3]);
-if (!Number(sum)) {
-  console.log('NaN');
-} else {
-  console.log(sum);
+function add (a, b) {
+  const sum = a + b;
+  if (!Number(sum)) {
+    console.log('NaN');
+  } else {
+    console.log(sum);
+  }
 }
+add(Number(process.argv[2]), Number(process.argv[3]));
