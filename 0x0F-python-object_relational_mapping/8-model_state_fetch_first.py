@@ -16,4 +16,4 @@ if __name__ == "__main__":
     if fstate is None:
         print("Nothing")
     else:
-        print("{}: {}".format(State.id, State.name))
+        print("{}: {}".format(fstate.id, fstate.name))
