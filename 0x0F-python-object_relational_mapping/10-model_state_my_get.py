@@ -12,6 +12,10 @@ if __name__ == "__main__":
     engine = create_engine(db_url, pool_pre_ping=True)
     Sasho = sessionmaker(bind=engine)
     session = Sasho()
+    found = 0
     for star in session.query(State).order_by(State.id):
         if argv[4] == star.name:
-            print("{}: {}".format(star.id, star.name))
+            print("{}".format(star.id))
+            found = 1
+    if found == 0:
+        print("Not found")
