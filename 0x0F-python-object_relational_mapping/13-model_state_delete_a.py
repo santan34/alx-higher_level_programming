@@ -11,7 +11,8 @@ if __name__ == "__main__":
     engine = create_engine(db, pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     sasho = Session()
-
-    state = sasho.query(State).filter_by(id=2).first()
-    state.name = "New Mexico"
+    state = sasho.query(State)
+    for name in state:
+        if 'a' in name.name:
+            sasho.delete(name)
     sasho.commit()
