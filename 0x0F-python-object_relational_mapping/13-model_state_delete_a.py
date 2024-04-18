@@ -10,9 +10,8 @@ if __name__ == "__main__":
     db = f"mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}@localhost/{sys.argv[3]}"
     engine = create_engine(db, pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
-    sasho = Session()
-    state = sasho.query(State)
+    sasho = Session()    
+    state = sasho.query(State).filter(State.name.like('%a%')).all()
     for name in state:
-        if 'a' in name.name:
-            sasho.delete(name)
+        sasho.delete(name)
     sasho.commit()
