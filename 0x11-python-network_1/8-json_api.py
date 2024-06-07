@@ -1,24 +1,18 @@
 #!/usr/bin/python3
-"""requests 4"""
-
+# requests use
 import requests
-import sys
-
-
-def postapi(letter=""):
-    """the function tpost an emaol i think"""
-    url = "http://0.0.0.0:5000/search_user"
-    val = {'q': len}
-    data = requests.post(url, data=val)
-    new_data = data.json()
-    if new_data:
-        print(f"[{new_data.get('id')}] {new_data.get('name')}")
-    else:
-        print('No result')
-
+from sys import argv
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        postapi(sys.argv[1])
+    if len(argv) > 1:
+        qVar = argv[1]
     else:
-        postapi()
+        qVar = ""
+    r = requests.post("http://0.0.0.0:5000/search_user", data={'q': qVar})
+    try:
+        if r.json():
+            print("[{}] {}".format(r.json().get('id'), r.json().get('name')))
+        else:
+            print("No result")
+    except BaseException:
+        print("Not a valid JSON")
