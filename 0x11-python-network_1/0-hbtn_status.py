@@ -12,9 +12,9 @@ def alxstatus(url):
         data_utf = data.decode('utf8')
 
     print("Body response:")
-    print(f"\t - type: {type(data)}")
-    print(f"\t - content: {data}")
-    print(f"\t - utf8 content: {data_utf}")
+    print(f"\t- type: {type(data)}")
+    print(f"\t- content: {data}")
+    print(f"\t- utf8 content: {data_utf}")
 
 
 if __name__ == "__main__":
