@@ -14,7 +14,7 @@ def reqmail(url):
             page = response.read().decode('utf-8')
             print(page)
     except urllib.error.HTTPError as e:
-        print(f"urllib.error: {e.code}")
+        print(f"Error code: {e.code}")
 
 
 if __name__ == "__main__":
