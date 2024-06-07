@@ -15,7 +15,7 @@ def thefunc(repo, name):
             k = req[i].get("commit").get("author").get('name')
             print(f"{j}: {k}")
     except BaseException as e:
-        print("error in fetching")
+        pass
 
 
 if __name__ == "__main__":
