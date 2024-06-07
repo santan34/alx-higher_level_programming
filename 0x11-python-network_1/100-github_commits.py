@@ -10,6 +10,12 @@ def thefunc(repo, name):
 
     try:
         for i in range(10):
-            print(f"{req[i].get("sha")}: {req[i].get("commit").get("author").get('name')}")
+            j = req[i].get("sha")
+            k = req[i].get("commit").get("author").get('name')
+            print(f"{j}: {k}")
     except BaseException as e:
         print("error in fetching")
+
+
+if __name__ == "__main__":
+    thefunc(argv[1], argv[2])
