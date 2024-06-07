@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-# lets do this git
+"""lets do this git"""
+
 import requests
 from sys import argv
 
