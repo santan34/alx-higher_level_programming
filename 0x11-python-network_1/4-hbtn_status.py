@@ -2,7 +2,6 @@
 """requests 0"""
 
 import requests
-import sys
 
 
 def alxstatus(url):
