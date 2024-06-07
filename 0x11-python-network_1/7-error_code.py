@@ -13,5 +13,6 @@ def reqmail(url):
     else:
         print(req.text)
 
+
 if __name__ == "__main__":
     reqmail(sys.argv[1])
