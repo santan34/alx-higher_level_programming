@@ -7,12 +7,11 @@ import sys
 
 def reqmail(url):
     """the function reqs a url handles errors"""
-    try:
-        req = requests.get(url)
+    req = requests.get(url)
+    if req.status_code > 399:
+        print(f"Error code: {req.status_code}")
+    else:
         print(req.text)
-    except requests.exceptions.HTTPError as e:
-        print(f"Error code: {e.code}")
-
 
 if __name__ == "__main__":
     reqmail(sys.argv[1])
